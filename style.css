@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/images/bday.gif');
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.block{
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    perspective: -90%;
+}
+.frame{
+    width: 600px;
+    height: 150px;
+    box-shadow: 10px 10px 10px rgba(255, 217, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 1.8rem;
+    transform: rotateY(360deg);
+    position: absolute;
+}
+.frame img{
+    width: 200px;
+    height: 150px;
+    border-radius: 150%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.frame p{
+    font-size: 20px;
+    font-weight: bold;
+    transform: rotateX(360deg) rotateZ(360deg);
+    width: 400px;
+}
+.frame:nth-child(1){
+    top: 50px;
+    Z-index: 1;
+    background-color: rgb(251, 0, 222);
+    border-radius: 20px;
+}
+.frame:nth-child(2){
+    top: 175px;
+    Z-index: 1;
+    background-color: rgb(138, 0, 251);
+    border-radius: 10px;
+}
+.frame:nth-child(3){
+    top: 300px;
+    Z-index: 1;
+    background-color: rgb(188, 0, 251);
+    border-radius: 10px;
+}
+.bdaycake{
+    position: relative;
+    margin-left: 1000px;
+    margin-top: 450px;
+}
+.plate{
+    position:absolute;
+    width: 240px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: goldenrod;
+}
+.plate::before{
+    content: '';
+    position: absolute;
+    width: 195px;
+    height: 90px;
+    background-color: #9c4499;
+    top: -90px;
+    left: 25px;
+}
+.plate::after{
+    content: '';
+    position: absolute;
+    width: 195px;
+    left: 25px;
+    height: 10px;
+    background-color: rgb(255,230,0);
+    top: -60px;
+    box-shadow: 0px 25px rgba(255, 230, 0, 0.57);
+}
+.cream{
+    position: absolute;
+    background-color: #9c4499;
+    width: 195px;
+    height: 20px;
+    left: 25px;
+    top: -110px;
+    border-radius: 20px 20px 0 0;
+}
+.candle{
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background: repeating-linear-gradient(#fae0e4,#fae0e4 5px,#ff0a57 5px,#ff0a57 10px);
+    box-shadow: inset -5px 0px rgba(0,0,0,0.1);
+    top: -150px;
+    left: 118px;
+}
+.candle::before{
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 2px;
+    height: 10px;
+    top: -10px;
+    left: 4px;
+}
+.candle::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fcca46;
+    border-radius: 80% 15% 55% 50%/ 55% 15% 80% 50%;
+    box-shadow: inset -3px 3px #fcca46;
+    transform: rotate(-45deg);
+    top: -28px;
+    left: -5px;
+    animation: scale .5s ease-out infinite;
+    opacity: 0.9;
+}
+@keyframes scale {
+    0%{
+       transform: scaleY(1) rotate(-45deg);
+       opacity: 0.9; 
+    }
+    50%{
+        transform: scaleY(0.9) rotate(-45deg);
+        opacity: 0.8;
+    }
+    100%{
+        transform: scaleY(1) rotate(-45deg);
+        opacity: 0.9;
+    }
+}
+.flame{
+    position: absolute;
+}
+.flame::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 10px;
+    width: 118px;
+    border-radius: 0 10px 10px 0;
+    top: 0;
+    left: 123px;
+}
+.one{
+    position: absolute;
+    color: #fcca46;
+    font-size: 20px;
+    top: -165px;
+    left: 100px;
+    text-shadow: 33px -30px #fcca46;
+    animation: glow .5s ease infinite alternate;
+}
+.two{
+    position: absolute;
+    color: #fcca46;
+    font-size: 15px;
+    top: -190px;
+    left: 100px;
+    text-shadow: 35px 30px #fcca46;
+    animation: glow .4s ease infinite alternate;
+}
+.three{
+    position: absolute;
+    color: #fcca46;
+    font-size: 10px;
+    top: -195px;
+    left: 120px;
+    text-shadow: 30px 30px #fcca46;
+    animation: glow .8s ease infinite alternate;
+}
+@keyframes glow{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity:0;
+    }
+}
+.container{
+    margin: 0 auto;
+}
+h1{
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    margin-left: 580px;
+    text-transform: uppercase;
+}
+.glowing{
+    color:#fff;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #ffff,
+        0 0 20px #fff,
+        0 0 40px rgb(238, 6, 6),
+        0 0 80px rgba(255, 0, 0, 0.627),
+        0 0 90px rgb(0, 17, 255)
+}
+.ballon img{
+    width: 50px;
+    animation: bday 7s linear infinite;
+}
+.ballon{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -150px;
+}
+@keyframes bday {
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    25%{
+       
+        opacity: 1;
+    }
+    50%{
+        
+        opacity: 1;
+    }
+    75%{
+       
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+.ballon img:nth-child(1){
+    animation-delay: 1s;
+    width: 100px;
+}
+.ballon img:nth-child(2){
+    animation-delay: 4s;
+    width: 20px;
+}
+.ballon img:nth-child(3){
+    animation-delay: 3.5s;
+    width: 40px;
+}
+.ballon img:nth-child(4){
+    animation-delay: -0.5s;
+    width: 60px;
+}
+.ballon img:nth-child(5){
+    animation-delay: 0.10s;
+    width: 60px;
+}
+.ballon img:nth-child(6){
+    animation-delay: 1.9s;
+    width: 59px;
+}
+.ballon img:nth-child(7){
+    animation-delay: 2.6s;
+    width: 50px;
+}
+.ballon img:nth-child(8){
+    animation-delay: 3.5s;
+    width: 60px;
+}
+.ballon img:nth-child(9){
+    animation-delay: 0.5s;
+    width: 60px;
+}
+.ballon img:nth-child(10){
+    animation-delay: 0.10s;
+    width: 50px;
+}
+.ballon img:nth-child(11){
+    animation-delay: 4.5s;
+    width: 60px;
+}
+.ballon img:nth-child(12){
+    animation-delay: 3.4s;
+    width: 70px;
+}
+.ballon img:nth-child(13){
+    animation-delay: 2.6s;
+    width: 20px;
+}
+.ballon img:nth-child(14){
+    animation-delay: 1.1s;
+    width: 70px;
+}
+.ballon img:nth-child(15){
+    animation-delay: 3.5s;
+    width: 80px;
+}
+.ballon img:nth-child(16){
+    animation-delay: 4.5s;
+    width: 120px;
+}
+.ballon img:nth-child(17){
+    animation-delay: 2.10s;
+    width: 80px;
+}
+.ballon img:nth-child(18){
+    animation-delay: 1.5s;
+    width: 60px;
+}
+.ballon img:nth-child(19){
+    animation-delay: 5.10s;
+    width: 55px;
+}
+.ballon img:nth-child(20){
+    animation-delay: 3.5s;
+    width: 30px;
+}
+.ballon img:nth-child(21){
+    animation-delay: 1s;
+    width: 45px;
+}
+.right-img{
+    margin-left: 1300px;
+    margin-top: -600px;
+    height: 200px;
+    width: 100px;
+}
+@media screen and (max-width: 800px)
+{
+    .background{
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        position: absolute;
+        overflow: hidden; 
+     }
+     .block{
+        left: 3px;
+        perspective: -90%;
+        top: -4px;
+    }
+    .frame img{
+        width: 100px;
+        height: 125px;
+    }
+    .frame p{
+        font-size: 20px;
+        width: 200px;
+        text-align: center;
+    }
+    .frame:nth-child(1){
+        width: 300px;
+        height: 100px;
+        top: 360px;
+    }
+    .frame:nth-child(2){
+       width: 300px;
+       height: 100px;
+       top: 451px;
+    }
+    .frame:nth-child(3){
+        width: 300px;
+        height: 100px;
+        top: 540px;
+    }
+    .bdaycake{
+        position: relative;
+        margin-left: 60px;
+        margin-top: 330px;
+    }
+    h1{
+        font-weight: 1000;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-top: -300px;
+        text-align: center;
+    }
+    .container{
+        margin-bottom: 100px;
+    }
+    .ballon img:nth-child(1){
+        animation-delay: 1s;
+        width: 50px;
+        margin-left: -30px;
+    }
+    .ballon img:nth-child(2){
+        animation-delay: 4s;
+        width: 25px;
+        margin-left: -35px;
+      }
+    .ballon img:nth-child(3){
+        animation-delay: 2s;
+        width: 40px;
+        margin-left: -40px;
+    }
+    .ballon img:nth-child(4){
+        animation-delay: -10.5s;
+        width: 60px;
+        margin-left: -45px;
+    }
+    .ballon img:nth-child(5){
+        animation-delay: 0.10s;
+        width: 60px;
+        margin-left: -50px;
+    }
+    .ballon img:nth-child(6){
+        animation-delay: 2.6s;
+        width: 20px;
+        margin-left: -55px;
+    }
+    .ballon img:nth-child(7){
+        animation-delay: 1.6s;
+        width: 50px;
+        margin-left: -60px;
+    }
+    .ballon img:nth-child(8){
+        animation-delay: 20.5s;
+        width: 60px;
+        margin-left: -65px;
+    }
+    .ballon img:nth-child(9){
+        animation-delay: 35.5s;
+        width: 60px;
+        margin-left: -70px;
+    }
+    .ballon img:nth-child(10){
+        animation-delay: 25.5s;
+        width: 60px;
+        margin-left: -75px;
+    }
+    .ballon img:nth-child(11){
+        animation-delay: 18.5s;
+        width: 40px;
+        margin-left: -80px;
+    }
+    .ballon img:nth-child(12){
+        animation-delay: 10.5s;
+        width: 60px;
+        margin-left: -30px;
+    }
+    .ballon img:nth-child(13){
+        animation-delay: 7.5s;
+        width: 60px;
+        margin-left: -35px;
+    }
+    .ballon img:nth-child(14){
+        animation-delay: 1.5s;
+        width: 60px;
+        margin-left: -40px;
+    }
+    .ballon img:nth-child(15){
+        animation-delay: 10.5s;
+        width: 60px;
+        margin-left: -45px;
+    }
+    .ballon img:nth-child(16){
+        animation-delay: 70.5s;
+        width: 60px;
+        margin-left: -50px;
+    }
+    .ballon img:nth-child(17){
+        animation-delay: 100.5s;
+        width: 60px;
+        margin-left: -55px;
+    }
+    .ballon img:nth-child(18){
+        animation-delay: 50.5s;
+        width: 60px;
+        margin-left: -60px;
+    }
+    .ballon img:nth-child(19){
+        animation-delay: 20.5s;
+        width: 60px;
+        margin-left: -65px;
+    }.ballon img:nth-child(20){
+        animation-delay: 30.5s;
+        width: 60px;
+        margin-left: -70px;
+    }
+    .ballon img:nth-child(21){
+        animation-delay: 10.5s;
+        width: 50px;
+        margin-left: -75px;
+    }
+    .right-img{
+        margin-left: 300px;
+        margin-top: -90px;
+    }
+    @media screen and (max-width:900px) and (min-width:600px){
+    }
+}
